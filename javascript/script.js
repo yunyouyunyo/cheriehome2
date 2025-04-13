@@ -98,3 +98,54 @@ images.forEach((img, index) => {
     `;
     gallery.appendChild(item);
 });
+
+
+// micro
+const slide = document.getElementById('carousel-slide');
+const totalSlides = slide.children.length;
+let currentIndex = 0;
+const dotsContainer = document.getElementById('dots');
+
+// 產生 dots
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll('.dot');
+
+window.addEventListener('load', () => {
+    slide.style.width = `${slide.children.length * slide.querySelector('img').clientWidth}px`;
+    updateSlidePosition(); // 確保首次位置正確
+});
+
+
+function updateSlidePosition() {
+    const imageWidth = slide.querySelector('img').clientWidth;
+    slide.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    updateSlidePosition();
+}
+
+// 自動播放
+setInterval(() => {
+    nextSlide();
+}, 4000);
