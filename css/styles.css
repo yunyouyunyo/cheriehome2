@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* 基本樣式 */
 body {
@@ -35,6 +36,12 @@ h5 {
     letter-spacing: 8px;
 }
 
+#eng {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
 p {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
@@ -43,6 +50,8 @@ p {
     margin: 0 0 3vh 0;
 
 }
+
+
 
 /* 導覽列 */
 /* 基本 nav 樣式 */
@@ -321,7 +330,6 @@ nav.hide {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 80px;
     gap: 40px;
 }
 
@@ -626,6 +634,13 @@ nav.hide {
 
     #portfolio .container {
         grid-template-columns: 1fr;
+
+    }
+
+    #portfolio .title {
+        display: block;
+        text-align: center;
+        padding: 4vh;
     }
 
     .section {
@@ -644,16 +659,37 @@ nav.hide {
         display: block;
     }
 
+    .item {
+        height: 300px;
+        padding: 2vh;
+    }
+
     .item .text {
         display: none;
     }
 
+    .item.title {
+        padding: 0vh 0vh 0vh 0vh;
+    }
+
     #portfolio .title {
+        font-size: medium;
         flex-direction: column;
         text-align: center;
         max-width: 500px;
-        margin: 0 auto;
+
     }
+
+    #graduation {
+        display: block;
+        text-align: center;
+        padding: 3vh;
+    }
+
+    .github-button {
+        margin-bottom: 2vh;
+    }
+
 
     #swine img {
         width: 80%;
@@ -661,6 +697,14 @@ nav.hide {
         border-radius: 5%;
 
     }
+
+    #swine {
+        display: block;
+        text-align: center;
+        padding: 3vh;
+        margin: 0 auto;
+    }
+
 
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -709,15 +753,19 @@ nav.hide {
         text-align: center;
         margin: 0 auto;
         justify-content: center;
-     
+
     }
 
     .contact-left {
         text-align: center;
     }
-    
+
     .contact-right {
         text-align: center;
+    }
+
+    #gdsc {
+        padding: 3vh;
     }
 }
 
