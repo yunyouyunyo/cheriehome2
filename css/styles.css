@@ -57,11 +57,11 @@ p {
 /* 基本 nav 樣式 */
 nav {
     background: rgba(255, 255, 255, 0.15);
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 10px 20px;
+    padding-top: 10px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
@@ -78,7 +78,7 @@ nav.hide {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
 }
 
 .nav-menu {
@@ -683,7 +683,7 @@ nav.hide {
     #graduation {
         display: block;
         text-align: center;
-        padding: 3vh;
+        padding: 5vh;
     }
 
     .github-button {
@@ -734,10 +734,15 @@ nav.hide {
         right: 0;
         background: rgba(255, 255, 255, 0.7);
         flex-direction: column;
-        align-items: center;
+        text-align: center;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+    }
+
+    .nav-container {
+        max-width: 768px;
+        margin: 0 auto;
     }
 
     .nav-toggle:checked+.nav-toggle-label+.nav-menu {
@@ -796,6 +801,7 @@ nav.hide {
 #contact,
 #graduation {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
