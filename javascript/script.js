@@ -149,3 +149,30 @@ function goToSlide(index) {
 setInterval(() => {
     nextSlide();
 }, 4000);
+
+// schoolwork
+
+  // 直式那組
+  const verticalMain = document.getElementById("main-img-vertical");
+  const verticalThumbs = document.querySelectorAll(".thumb-vertical");
+
+  verticalThumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      verticalMain.src = thumb.src;
+      verticalThumbs.forEach(t => t.classList.remove("active"));
+      thumb.classList.add("active");
+    });
+  });
+
+  // 橫式那組
+  const horizontalMain = document.getElementById("main-img-horizontal");
+  const horizontalThumbs = document.querySelectorAll(".thumb-horizontal");
+
+  horizontalThumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      horizontalMain.src = thumb.src;
+      horizontalThumbs.forEach(t => t.classList.remove("active"));
+      thumb.classList.add("active");
+    });
+  });
+

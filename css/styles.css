@@ -512,6 +512,103 @@ nav.hide {
     background-color: #333;
 }
 
+/* schoolwork */
+#schoolwork .container {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#schoolwork .block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+#schoolwork .block .text {
+    width: 40%;
+    text-align: start;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+}
+
+.main-image img {
+    width: 600px;
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 350px;
+    object-fit:contain;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnails img {
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+.thumbnails img:hover,
+.thumbnails img.active {
+    border-color: #007bff;
+}
+
+
+
+.gallery-vertical {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .thumbnails-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 700px;
+    overflow-y: auto;
+  }
+  
+  .thumbnails-vertical img {
+    width: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: border 0.3s;
+  
+  }
+  
+  .thumbnails-vertical img:hover,
+  .thumbnails-vertical img.active {
+    border-color: #007bff;
+  }
+  
+  .main-image-vertical img {
+    width: 500px;
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    height: 720px;
+    object-fit: contain;
+  }
+
+
 /* gdsc */
 .image-grid {
     display: grid;
@@ -771,6 +868,17 @@ nav.hide {
 
     #gdsc {
         padding: 3vh;
+    }
+
+    #schoolwork .block {
+        margin-bottom: 350px;
+    }
+
+    #schoolwork .block .text {
+        display: none;
+    }
+    .thumbnails-vertical img {
+        width: 300px;
     }
 }
 
